@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "UI5 Debug Utils",
+    "description": "This extension adds simple debug features into the sites global namespace.",
+    "version": "0.1.0",
+    "action": {
+      "default_icon": "ui5-logo.png",
+      "default_popup": "index.html"
+    },
+    "background": {
+        "service_worker": "src/service-worker.js"
+    },
+    "content_scripts": [
+        {
+            "js": ["src/main.js"],
+            "matches": ["https://*/*", "http://*/*"],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["src/*"],
+            "matches": ["https://*/*", "http://*/*"]
+        }
+    ],
+    "permissions": [
+        "sidePanel"
+    ],
+    "side_panel": {
+        "default_path": "index.html"
+    }
+}

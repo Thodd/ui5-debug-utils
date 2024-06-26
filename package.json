@@ -1,0 +1,16 @@
+{
+  "name": "ui5dbg",
+  "version": "0.1.0",
+  "description": "UI5 Debug Utils",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "UI5",
+    "SAPUI5",
+    "Debugging"
+  ],
+  "author": "Thorsten Hochreuter",
+  "license": "MIT"
+}

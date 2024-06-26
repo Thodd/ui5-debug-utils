@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>UI5 Debug Utils</title>
+		<style>
+			* {
+				font-size: 0.9rem;
+				font-family: monospace;
+			}
+			.highlight {
+				color: #d90000;
+			}
+			.entry {
+				margin-top: 10px;
+				padding-bottom: 10px;
+				border-bottom: 1px dashed;
+			}
+			.title {
+				color: #0064d9;
+				font-weight: bold;
+			}
+			.explanation {
+				padding-top: 5px;
+				font-style: italic;
+				padding-left: 15px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="entry">
+			<div>Available APIs under the global <span class="highlight"><b>_ui5</b></div>
+			<div>
+				(If not present, call <span class="highlight">_ui5dbg.init()</span>).
+			</div>
+		</div>
+
+		<div class="entry">
+			<div class="title">control(HTMLElement):Element</div>
+			<div class="explanation">retrieves the Element associated with the given HTMLElement</div>
+		</div>
+
+		<div class="entry">
+			<div class="title">byId(sap.ui.core.ID):Element</div>
+			<div class="explanation">retrieves the Element with the given ID</div>
+		</div>
+
+		<div class="entry">
+			<div class="title">owner(Element|HTMLElement):Component</div>
+			<div class="explanation">retrieves the owner Component of the given Element</div>
+		</div>
+
+		<div class="entry">
+			<div class="title">Device:object</div>
+			<div class="explanation">the sap.ui.Device API</div>
+		</div>
+
+		<div class="entry">
+			<div class="title">modules:object</div>
+			<div class="explanation">Quick access to important modules</div>
+			<div>
+				<ul>
+					<li>Core</li>
+					<li>Component</li>
+					<li>Element</li>
+					<li>XMLView</li>
+					<li>XMLTemplateProcessor</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="entry">
+			<div class="title">cfg:object</div>
+			<div class="explanation">Quick access to configuration facades</div>
+			<div>
+				<ul>
+					<li>Localization</li>
+					<li>Formatting</li>
+					<li>Theming</li>
+					<li>Security</li>
+					<li>ControlBehavior</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>
