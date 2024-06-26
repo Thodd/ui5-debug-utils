@@ -25,20 +25,32 @@
 				font-style: italic;
 				padding-left: 15px;
 			}
+			code {
+				display: inline-block;
+				background: rgb(246, 246, 246);
+				border: 1px solid rgb(168, 168, 168);
+				border-radius: 3px;
+				padding: 2px;
+				margin-top: 3px;
+				font-style: normal;
+			}
+			li {
+				margin-bottom: 3px;
+			}
 		</style>
 	</head>
 
 	<body>
 		<div class="entry">
-			<div>Available APIs under the global <span class="highlight"><b>_ui5</b></div>
+			<div>Available APIs under the global <code>_ui5</code></div>
 			<div>
-				(If not present, call <span class="highlight">_ui5dbg.init()</span>).
+				If not present, call <code>_ui5dbg.init()</code>.
 			</div>
 		</div>
 
 		<div class="entry">
 			<div class="title">control(HTMLElement):Element</div>
-			<div class="explanation">retrieves the Element associated with the given HTMLElement</div>
+			<div class="explanation">retrieves the Element associated with the given <code>HTMLElement</code></div>
 		</div>
 
 		<div class="entry">
@@ -49,6 +61,11 @@
 		<div class="entry">
 			<div class="title">owner(Element|HTMLElement):Component</div>
 			<div class="explanation">retrieves the owner Component of the given Element</div>
+		</div>
+
+		<div class="entry">
+			<div class="title">module(string):any</div>
+			<div class="explanation">Probes for a module by the given name. Shorthand for <code>sap.ui.require(string)</code></div>
 		</div>
 
 		<div class="entry">
