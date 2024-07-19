@@ -2,6 +2,15 @@ import Utils from "./Utils.js";
 
 const dbgInterface = {
 
+    async require(modules) {
+        modules = Array.isArray(modules) ? modules : [modules];
+        return new Promise(function(resolve, reject) {
+            sap.ui.require(modules, function() {
+                resolve(Array.from(arguments));
+            }, reject)
+        });
+    },
+
     control(domNode) {
         return Utils.module("sap/ui/core/Element")?.closestTo(domNode);
     },
@@ -17,7 +26,7 @@ const dbgInterface = {
         return Utils.module("sap/ui/core/Component")?.getOwnerComponentFor(ele);
     },
 
-    module(moduleName) {
+    probe(moduleName) {
         return Utils.module(moduleName);
     },
 

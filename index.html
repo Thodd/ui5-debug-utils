@@ -49,6 +49,11 @@
 		</div>
 
 		<div class="entry">
+			<div class="title">require(string|string[]):Promise&lt;any[]&gt;</div>
+			<div class="explanation">Reqires the given module or list of modules, resolves with the resp. module's content e.g. <code>const [a, b] = await _ui5.require(["sap/ui/core/Theming", "sap/ui/core/Core"])</code></div>
+		</div>
+
+		<div class="entry">
 			<div class="title">control(HTMLElement):Element</div>
 			<div class="explanation">retrieves the Element associated with the given <code>HTMLElement</code></div>
 		</div>
@@ -64,7 +69,7 @@
 		</div>
 
 		<div class="entry">
-			<div class="title">module(string):any</div>
+			<div class="title">probe(string):any</div>
 			<div class="explanation">Probes for a module by the given name. Shorthand for <code>sap.ui.require(string)</code></div>
 		</div>
 

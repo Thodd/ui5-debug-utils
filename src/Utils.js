@@ -20,7 +20,7 @@ const Utils = {
         return globalThis?.sap?.ui?.require;
     },
 
-    module(className) {
+    probe(className) {
         return UI5_CLASSES[className] ??= sap.ui.require(className);
     }
 }
