@@ -12,69 +12,69 @@ const dbgInterface = {
     },
 
     control(domNode) {
-        return Utils.module("sap/ui/core/Element")?.closestTo(domNode);
+        return Utils.probe("sap/ui/core/Element")?.closestTo(domNode);
     },
 
     byId(s) {
-        return Utils.module("sap/ui/core/Element")?.getElementById(s);
+        return Utils.probe("sap/ui/core/Element")?.getElementById(s);
     },
 
     owner(ele) {
         if (ele instanceof HTMLElement) {
             ele = this.control(ele);
         }
-        return Utils.module("sap/ui/core/Component")?.getOwnerComponentFor(ele);
+        return Utils.probe("sap/ui/core/Component")?.getOwnerComponentFor(ele);
     },
 
     probe(moduleName) {
-        return Utils.module(moduleName);
+        return Utils.probe(moduleName);
     },
 
     get includeStylesheet() {
-        return Utils.module("sap/ui/dom/includeStylesheet");
+        return Utils.probe("sap/ui/dom/includeStylesheet");
     },
 
     get Device() {
-        return Utils.module("sap/ui/Device");
+        return Utils.probe("sap/ui/Device");
     },
 
     // Quick access to configs
     cfg: {
         get Localization(){
-            return Utils.module("sap/base/i18n/Localization");
+            return Utils.probe("sap/base/i18n/Localization");
         },
         get Theming() {
-            return Utils.module("sap/ui/core/Theming");
+            return Utils.probe("sap/ui/core/Theming");
         },
         get Formatting() {
-            return Utils.module("sap/base/i18n/Formatting");
+            return Utils.probe("sap/base/i18n/Formatting");
         },
         get ControlBehavior() {
-            return Utils.module("sap/ui/core/ControlBehavior");
+            return Utils.probe("sap/ui/core/ControlBehavior");
         },
         get Security() {
-            return Utils.module("sap/ui/Security");
+            return Utils.probe("sap/ui/Security");
         }
     },
 
     modules: {
         get Core() {
-            return Utils.module("sap/ui/core/Core");
+            return Utils.probe("sap/ui/core/Core");
         },
         get Element() {
-            return Utils.module("sap/ui/core/Element");
+            return Utils.probe("sap/ui/core/Element");
         },
         get ManagedObject() {
-            return Utils.module("sap/ui/base/ManagedObject");
+            return Utils.probe("sap/ui/base/ManagedObject");
         },
         get Component() {
-            return Utils.module("sap/ui/core/Component");
+            return Utils.probe("sap/ui/core/Component");
         },
         get XMLView() {
-            return Utils.module("sap/ui/core/mvc/XMLView");
+            return Utils.probe("sap/ui/core/mvc/XMLView");
         },
         get XMLTemplateProcessor() {
-            return Utils.module("sap/ui/core/XMLTemplateProcessor");
+            return Utils.probe("sap/ui/core/XMLTemplateProcessor");
         }
     }
 }
